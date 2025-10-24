@@ -1,0 +1,92 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+013     CCP_1
+013     CCP_1_LOW
+014     CCP_1_HIGH
+01A.6   C1OUT
+01B.6   C2OUT
+020     @SCRATCH
+021     @SCRATCH
+021     _RETURN_
+022     @SCRATCH
+023     @SCRATCH
+024     value
+025     value1
+026     val
+027     val1
+028     lcd_init.i
+028     @PRINTF_U_643.P1
+028     MAIN.@SCRATCH1
+029-02C lcd_init.LCD_INIT_STRING
+029     @PRINTF_U_643.P1
+02A     @DIV88.P1
+02A     lcd_putc.c
+02B     @DIV88.P1
+02B     lcd_gotoxy.x
+02C     lcd_gotoxy.y
+02C     @DIV88.@SCRATCH1
+02D     lcd_gotoxy.address
+02D     @delay_ms1.P1
+02D     lcd_init.@SCRATCH1
+02E     lcd_gotoxy.@SCRATCH1
+02F     lcd_send_byte.address
+030     lcd_send_byte.n
+031     lcd_read_byte.low
+031     lcd_send_byte.@SCRATCH1
+032     lcd_send_nibble.n
+032     lcd_read_byte.high
+033     lcd_read_nibble.n
+033     lcd_read_byte.@SCRATCH1
+034     lcd_read_nibble.@SCRATCH1
+10D-10E @READ_PROGRAM_MEMORY8.P1
+
+ROM Allocation:
+000004  @const663.call
+000015  @const672.call
+000026  @delay_ms1
+000039  lcd_send_nibble
+000065  lcd_read_nibble
+000096  lcd_send_byte
+00009E  lcd_read_byte
+0000F2  lcd_init
+000135  lcd_gotoxy
+000147  lcd_putc
+000173  @DIV88
+000188  @PRINTF_U_643
+0001BD  MAIN
+0001BD  @cinit1
+0001CF  @cinit2
+
+Project Directory:
+    G:\My Drive\Academic\BEng (Hons) Embedded Electronics Systems Engineering\Level 4\Embedded C\Classwork\Proteus\PIC16F616_1\
+
+Project Files:
+    main.c (link)                                           [22-Oct-24 15:30  CRC=876EDC44]
+    main.h                                                  [22-Oct-24 15:00  CRC=D8102B21]
+    C:\Program Files (x86)\PICCDEMO\devices\16F616.h        [26-Mar-24 09:13  CRC=BB3F2C8F]
+    C:\Program Files (x86)\PICCDEMO\drivers\lcd.c           [22-Feb-16 10:05  CRC=D1A6378A]
+
+Source signature=BE0AA308
+Program memory checksum=0000
+Hex file CRC=24AE
+
+Units:
+    G:\My Drive\Academic\BEng (Hons) Embedded Electronics Systems Engineering\Level 4\Embedded C\Classwork\Proteus\PIC16F616_1\main
+
+Compiler Settings:
+    Processor:      PIC16F616
+    Pointer Size:   8
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:   CCS5
+
+Compiler operating in Evaluation Mode
+To obtain a fully enabled compiler visit www.ccsinfo.com/products
+
+Output Files:
+    Errors:      Debug.err
+    INHX8:       Debug.cof
+    Symbols:     Debug.sym
+    List:        Debug.lst
+    Debug/COFF:  Debug.cof

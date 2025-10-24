@@ -1,0 +1,150 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+004     adc
+005     remainder
+006     new_adc
+007-014 knightrider
+015     off
+016     on
+017-018 @sprintf_string
+019     kitt_text.kitt
+01A     @PRINTF_U_654.P1
+01A     @PSTRINGCN_627.P2
+01A     @PSTRINGCN_654.P3
+01A     @PRINTF_U_627.P4
+01A     kitt_mode.q
+01A     lcd_init.i
+01A     @PSTRINGC_627.@SCRATCH1
+01B-01E lcd_init.LCD_INIT_STRING
+01B     @PRINTF_U_654.P1
+01B     @PRINTF_U_627.P2
+01B     @PSTRINGC_654.@SCRATCH1
+01B     @PSTRINGCN_654.@SCRATCH1
+01B     @PSTRINGCN_627.@SCRATCH1
+01B     @PSTRINGC_627.@SCRATCH2
+01C     @DIV88.P1
+01C     @PSTRINGC_654.@SCRATCH2
+01C     @PSTRINGCN_654.@SCRATCH2
+01C     @PSTRINGCN_627.@SCRATCH2
+01D     lcd_putc.c
+01D     @DIV88.P1
+01D     @PUTCHAR_1_.P2
+01E     lcd_gotoxy.x
+01E     @DIV88.@SCRATCH1
+01F     lcd_gotoxy.y
+01F     @delay_ms1.P1
+01F     lcd_init.@SCRATCH1
+020     lcd_gotoxy.address
+021     lcd_gotoxy.@SCRATCH1
+022     lcd_send_byte.address
+023     lcd_send_byte.n
+024     lcd_read_byte.low
+024     lcd_send_byte.@SCRATCH1
+025     lcd_send_nibble.n
+025     lcd_read_byte.high
+026     lcd_read_nibble.n
+026     lcd_read_byte.@SCRATCH1
+027     lcd_read_nibble.@SCRATCH1
+F78.6   C2OUT
+F79.6   C1OUT
+F90     CCP_2_LOW
+F90     CCP_2
+F91     CCP_2_HIGH
+FBE     CCP_1_LOW
+FBE     CCP_1
+FBF     CCP_1_HIGH
+FE1-FE2 @READ_PACKED_MEMORY.P1
+FE1-FE2 @WRITE_PACKED_MEMORY.P2
+FE9-FEA @READ_PACKED_MEMORY.P1
+FE9-FEA @WRITE_PROGRAM_MEMORY.P2
+FE9-FEA @WRITE_PACKED_MEMORY.P3
+FE9-FEA @READ_PROGRAM_MEMORY.P4
+FF6-FF8 @READ_PROGRAM_MEMORY.P1
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+000004  @const683.call
+000014  @const688.call
+000024  @const689.call
+000034  @const690.call
+00003E  @const699.call
+000052  @const700.call
+00005C  @const701.call
+000066  @const702.call
+000076  @const703.call
+00008A  @const704.call
+000094  @const705.call
+0000A2  @const711.call
+0000B6  @const712.call
+0000CA  @const713.call
+0000D4  @const714.call
+0000E4  @const715.call
+0000EE  @const716.call
+000104  @const718.call
+000116  @const720.call
+000124  @const721.call
+00012E  @const722.call
+00013E  @const723.call
+000152  @const724.call
+00015C  @delay_ms1
+000184  lcd_send_nibble
+0001CA  lcd_read_nibble
+00021C  lcd_read_byte
+000268  lcd_send_byte
+0002AE  lcd_init
+00032A  analog
+00034E  lcd_gotoxy
+000370  lcd_putc
+0003C0  @PSTRINGC_654
+0003E0  @PSTRINGCN_654
+0003FE  @DIV88
+000426  @PRINTF_U_654
+00048C  run_motor
+000546  @PUTCHAR_1_
+000588  @PSTRINGCN_627
+0005A6  @PRINTF_U_627
+00060E  lcd_lights
+000768  @PSTRINGC_627
+000788  button_on
+0007A0  button_off
+0007B8  button_press
+00083C  kitt_text
+000852  kitt_mode
+0009A4  @cinit1
+0009A4  MAIN
+000A16  @cinit2
+
+Project Directory:
+    C:\Users\ISA06016798\Documents\Embeded C\proteus (2)\ACDA - Emma Moseley - Assignment\PIC18F45K50\
+
+Project Files:
+    main.c (link)                                           [15-Jan-25 08:49  CRC=6A34339B]
+    main.h                                                  [14-Jan-25 13:59  CRC=8EFB0D07]
+    18F45K50.h                                              [13-Jan-25 16:40  CRC=1BDE1B4B]
+    lcd.c                                                   [13-Jan-25 16:40  CRC=D1A6378A]
+
+Source signature=B859CB01
+Program memory checksum=0000
+Hex file CRC=D441
+
+Units:
+    C:\Users\ISA06016798\Documents\Embeded C\proteus (2)\ACDA - Emma Moseley - Assignment\PIC18F45K50\main
+
+Compiler Settings:
+    Processor:      PIC18F45K50
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:   CCS5
+
+Output Files:
+    Errors:      Debug.err
+    INHX32:      Debug.cof
+    Symbols:     Debug.sym
+    List:        Debug.lst
+    Debug/COFF:  Debug.cof

@@ -1,0 +1,39 @@
+_RETURN_
+CCP_1
+CCP_1_LOW
+CCP_1_HIGH
+CCP_2
+CCP_2_LOW
+CCP_2_HIGH
+C1OUT
+C2OUT
+counter
+soft_clock
+
+Project Directory:
+    C:\Users\soac-gj2\Desktop\playtime\proteus 2\PIC18F24K20_1\
+
+Project Files:
+    main.c                                                  [20-Mar-24 14:31  CRC=341928C2]
+    main.h                                                  [20-Mar-24 12:54  CRC=CEB7AFD3]
+    18F24K20.h                                              [26-Jun-15 09:09  CRC=1B7FC00C]
+
+Source signature=39D058AD
+
+Units:
+    main (main)
+
+Compiler Settings:
+    Processor:      PIC18F24K20
+    Pointer Size:   16
+    ADC Range:      0-1023
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Output file:    Relocatable
+    Compile Mode:       CCS5
+
+Output Files:
+    Errors:      main.err
+    Object:      main.o
+    Symbols:     main.osym

@@ -1,0 +1,116 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+004     switches
+005     rout1
+006     rout2
+007     rout3
+008     rout4
+009-010 kr
+011-012 @sprintf_string
+013     lcd_init.i
+013     routine4.value
+013     routine1.@SCRATCH1
+014     @PRINTF_U_665.P1
+014     routine4.q
+014-017 lcd_init.LCD_INIT_STRING
+015     @PRINTF_U_665.P1
+015     read_pot.value
+015     routine4.@SCRATCH1
+015     @PSTRINGC_665.@SCRATCH1
+016     @DIV88.P1
+016     @PSTRINGC_665.@SCRATCH2
+017     @DIV88.P1
+017     lcd_putc.c
+018     lcd_gotoxy.x
+018     @delay_ms1.P1
+018     lcd_init.@SCRATCH1
+018     @DIV88.@SCRATCH1
+019     lcd_gotoxy.y
+01A     lcd_gotoxy.address
+01B     lcd_gotoxy.@SCRATCH1
+01C     lcd_send_byte.address
+01D     lcd_send_byte.n
+01E     lcd_read_byte.low
+01E     lcd_send_byte.@SCRATCH1
+01F     lcd_send_nibble.n
+01F     lcd_read_byte.high
+020     lcd_read_nibble.n
+020     lcd_read_byte.@SCRATCH1
+021     lcd_read_nibble.@SCRATCH1
+F7A.6   C2OUT
+F7B.6   C1OUT
+FBB     CCP_2
+FBB     CCP_2_LOW
+FBC     CCP_2_HIGH
+FBE     CCP_1_LOW
+FBE     CCP_1
+FBF     CCP_1_HIGH
+FE1-FE2 @READ_PACKED_MEMORY.P1
+FE1-FE2 @WRITE_PACKED_MEMORY.P2
+FE9-FEA @WRITE_PACKED_MEMORY.P1
+FE9-FEA @READ_PACKED_MEMORY.P2
+FE9-FEA @READ_PROGRAM_MEMORY.P3
+FE9-FEA @WRITE_PROGRAM_MEMORY.P4
+FF6-FF8 @READ_PROGRAM_MEMORY.P1
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+000004  @const694.call
+000012  @const700.call
+000026  @const702.call
+00003A  @const703.call
+000048  @delay_ms1
+000070  lcd_send_nibble
+0000B6  lcd_read_nibble
+000108  lcd_read_byte
+000154  lcd_send_byte
+00019A  lcd_init
+000216  lcd_gotoxy
+000238  lcd_putc
+000288  @PSTRINGC_665
+0002A8  read_pot
+0002CE  @DIV88
+0002F6  @PRINTF_U_665
+00035E  routine1
+0003A6  routine2
+0003E0  routine3
+00041A  routine4
+00047C  @cinit1
+00047C  MAIN
+0004CC  @cinit2
+
+Project Directory:
+    C:\Users\soac-gj2\Desktop\embedded c 2024\Project3\proteus\PIC18F26K20_1\
+
+Project Files:
+    main.c (link)                                           [02-Feb-24 11:23  CRC=5AC22A87]
+    main.h                                                  [01-Feb-24 16:21  CRC=17704685]
+    18F26K20.h                                              [26-Jun-15 09:09  CRC=43F2182D]
+    lcd.c                                                   [19-Sep-13 15:38  CRC=D1A6378A]
+
+Source signature=5970F84D
+Program memory checksum=0000
+Program memory CRC=0000
+Hex file CRC=0EA9
+
+Units:
+    C:\Users\soac-gj2\Desktop\embedded c 2024\Project3\proteus\PIC18F26K20_1\main.o
+
+Compiler Settings:
+    Processor:      PIC18F26K20
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:       CCS5
+
+Output Files:
+    Errors:      Debug.err
+    INHX32:      Debug.cof
+    Symbols:     Debug.sym
+    List:        Debug.lst
+    Debug/COFF:  Debug.cof

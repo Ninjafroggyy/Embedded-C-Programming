@@ -1,0 +1,52 @@
+_RETURN_
+CCP_1
+CCP_1_LOW
+CCP_1_HIGH
+CCP_2
+CCP_2_LOW
+CCP_2_HIGH
+CCP_3
+CCP_3_LOW
+CCP_3_HIGH
+CCP_4
+CCP_4_LOW
+CCP_4_HIGH
+CCP_5
+CCP_5_LOW
+CCP_5_HIGH
+C1OUT
+C2OUT
+value0
+value1
+value2
+counter
+@sprintf_string
+
+Project Directory:
+    C:\Users\ISA06016798\Downloads\Content-20251024T192805Z-1-001\Content\Exam-20251024T192756Z-1-001\Exam\proteus\PIC18F25K22_1\
+
+Project Files:
+    main.c                                                  [24-Oct-25 21:44  CRC=F89E5675]
+    main.h                                                  [24-Oct-25 21:41  CRC=6A514B4D]
+    18F25K22.h                                              [24-Oct-25 21:41  CRC=E0773DBA]
+    lcd.c                                                   [24-Oct-25 21:41  CRC=D1A6378A]
+
+Source signature=E6B34E90
+
+Units:
+    C:\Users\ISA06016798\Downloads\Content-20251024T192805Z-1-001\Content\Exam-20251024T192756Z-1-001\Exam\proteus\PIC18F25K22_1\main
+
+Compiler Settings:
+    Processor:      PIC18F25K22
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Output file:    Relocatable
+    Compile Mode:   CCS5
+
+Output Files:
+    Errors:      main.err
+    Object:      main.o
+    Symbols:     main.osym

@@ -1,0 +1,103 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+004     rs232_errors
+005     swt_way
+006-007 @sprintf_string
+008     MAIN.q
+009     read_switch.swt
+009     lcd_init.i
+009     @PSTRINGC_760.@SCRATCH1
+00A     @PSTRINGCN_760.P1
+00A-00D lcd_init.LCD_INIT_STRING
+00A     @PRINTF_X_760.P1
+00A     @PSTRINGC_760.@SCRATCH2
+00B     @PRINTF_X_760.P1
+00B     @PSTRINGCN_760.@SCRATCH1
+00C     @PSTRINGCN_760.@SCRATCH2
+00D     lcd_putc.c
+00E     @delay_ms1.P1
+00E     lcd_gotoxy.x
+00E     lcd_init.@SCRATCH1
+00F     lcd_gotoxy.y
+010     lcd_gotoxy.address
+011     lcd_gotoxy.@SCRATCH1
+012     lcd_send_byte.address
+013     lcd_send_byte.n
+014     lcd_read_byte.low
+014     lcd_send_byte.@SCRATCH1
+015     lcd_send_nibble.n
+015     lcd_read_byte.high
+016     lcd_read_nibble.n
+016     lcd_read_byte.@SCRATCH1
+017     lcd_read_nibble.@SCRATCH1
+F83     PSP_DATA
+FB4.6   C1OUT
+FB4.7   C2OUT
+FBB     CCP_2_LOW
+FBB     CCP_2
+FBC     CCP_2_HIGH
+FBE     CCP_1_LOW
+FBE     CCP_1
+FBF     CCP_1_HIGH
+FE1-FE2 @WRITE_PACKED_MEMORY.P1
+FE1-FE2 @READ_PACKED_MEMORY.P2
+FE9-FEA @WRITE_PROGRAM_MEMORY.P1
+FE9-FEA @WRITE_PACKED_MEMORY.P2
+FE9-FEA @READ_PROGRAM_MEMORY.P3
+FE9-FEA @READ_PACKED_MEMORY.P4
+FF6-FF8 @READ_PROGRAM_MEMORY.P1
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+000004  @const779.call
+000012  @const785.call
+000020  @delay_ms1
+000046  lcd_send_nibble
+000086  lcd_read_nibble
+0000D8  lcd_read_byte
+000122  lcd_send_byte
+000168  lcd_init
+0001E4  lcd_gotoxy
+000206  lcd_putc
+000256  @PSTRINGCN_760
+000276  @PRINTF_X_760
+0002B6  read_switch
+0002F0  @PSTRINGC_760
+000312  @cinit1
+000312  MAIN
+00033E  @cinit2
+
+Project Directory:
+    C:\Users\S2317703\Documents\project 3\proteus\PIC18F4550_1\
+
+Project Files:
+    main.c (link)                                           [02-Dec-24 10:47  CRC=3075047A]
+    main.h                                                  [02-Dec-24 09:21  CRC=1AFB437F]
+    18F4550.h                                               [02-Dec-24 09:21  CRC=97DC185D]
+    lcd.c                                                   [02-Dec-24 09:21  CRC=D1A6378A]
+
+Source signature=8698CF6A
+Program memory checksum=0000
+Hex file CRC=7282
+
+Units:
+    C:\Users\S2317703\Documents\project 3\proteus\PIC18F4550_1\main
+
+Compiler Settings:
+    Processor:      PIC18F4550
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:   CCS5
+
+Output Files:
+    Errors:      Debug.err
+    INHX32:      Debug.cof
+    Symbols:     Debug.sym
+    List:        Debug.lst
+    Debug/COFF:  Debug.cof

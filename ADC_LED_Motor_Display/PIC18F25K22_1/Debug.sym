@@ -1,0 +1,120 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+004     value0
+005     value1
+006     value2
+007     counter
+008-009 @sprintf_string
+00A     lcd_init.i
+00A     @PRINTF_U_820.P1
+00A     @PSTRINGCN_820.P2
+00A     led_display.@SCRATCH1
+00B-00E lcd_init.LCD_INIT_STRING
+00B     @PRINTF_U_820.P1
+00B     @PSTRINGCN_820.@SCRATCH1
+00C     @DIV88.P1
+00C     @PSTRINGCN_820.@SCRATCH2
+00D     lcd_putc.c
+00D     @DIV88.P1
+00E     lcd_gotoxy.x
+00E     @DIV88.@SCRATCH1
+00F     @delay_ms1.P1
+00F     lcd_gotoxy.y
+00F     lcd_init.@SCRATCH1
+010     lcd_gotoxy.address
+011     lcd_gotoxy.@SCRATCH1
+012     lcd_send_byte.address
+013     lcd_send_byte.n
+014     lcd_read_byte.low
+014     lcd_send_byte.@SCRATCH1
+015     lcd_read_byte.high
+015     lcd_send_nibble.n
+016     lcd_read_nibble.n
+016     lcd_read_byte.@SCRATCH1
+017     lcd_read_nibble.@SCRATCH1
+F55     CCP_5_LOW
+F55     CCP_5
+F56     CCP_5_HIGH
+F58     CCP_4
+F58     CCP_4_LOW
+F59     CCP_4_HIGH
+F5E     CCP_3_LOW
+F5E     CCP_3
+F5F     CCP_3_HIGH
+F67     CCP_2_LOW
+F67     CCP_2
+F68     CCP_2_HIGH
+F78.6   C2OUT
+F79.6   C1OUT
+FBE     CCP_1
+FBE     CCP_1_LOW
+FBF     CCP_1_HIGH
+FE1-FE2 @READ_PACKED_MEMORY.P1
+FE1-FE2 @WRITE_PACKED_MEMORY.P2
+FE9-FEA @READ_PACKED_MEMORY.P1
+FE9-FEA @WRITE_PACKED_MEMORY.P2
+FE9-FEA @READ_PROGRAM_MEMORY.P3
+FE9-FEA @WRITE_PROGRAM_MEMORY.P4
+FF6-FF8 @READ_PROGRAM_MEMORY.P1
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+000004  @const837.call
+000014  @const842.call
+000024  @const843.call
+00002E  @const844.call
+000040  @const845.call
+00004E  @const854.call
+00005C  @const855.call
+00006A  @delay_ms1
+000092  lcd_send_nibble
+0000D8  lcd_read_nibble
+00012A  lcd_read_byte
+000176  lcd_send_byte
+0001BC  lcd_init
+000238  lcd_gotoxy
+00025A  lcd_putc
+0002AA  @PSTRINGCN_820
+0002C8  @DIV88
+0002F0  @PRINTF_U_820
+000356  display_conversion
+000420  led_display
+0004CC  rotates_motor
+000510  MAIN
+000510  @cinit1
+00053E  @cinit2
+
+Project Directory:
+    C:\Users\ISA06016798\Downloads\Content-20251024T192805Z-1-001\Content\Exam-20251024T192756Z-1-001\Exam\proteus\PIC18F25K22_1\
+
+Project Files:
+    main.c (link)                                           [24-Oct-25 21:44  CRC=F89E5675]
+    main.h                                                  [24-Oct-25 21:41  CRC=6A514B4D]
+    18F25K22.h                                              [24-Oct-25 21:41  CRC=E0773DBA]
+    lcd.c                                                   [24-Oct-25 21:41  CRC=D1A6378A]
+
+Source signature=E6B34E90
+Program memory checksum=0000
+Hex file CRC=3FFC
+
+Units:
+    C:\Users\ISA06016798\Downloads\Content-20251024T192805Z-1-001\Content\Exam-20251024T192756Z-1-001\Exam\proteus\PIC18F25K22_1\main
+
+Compiler Settings:
+    Processor:      PIC18F25K22
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:   CCS5
+
+Output Files:
+    Errors:      Debug.err
+    INHX32:      Debug.cof
+    Symbols:     Debug.sym
+    List:        Debug.lst
+    Debug/COFF:  Debug.cof

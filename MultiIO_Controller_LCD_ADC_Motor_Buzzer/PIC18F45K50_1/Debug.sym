@@ -1,0 +1,152 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+004     rs232_errors
+005     switches
+006     rout1
+007     rout2
+008     rout3
+009     rout4
+00A     ops
+00B     old_ops
+00C     adc0
+00D     adc1
+00E     adc2
+00F-010 @sprintf_string
+011     lcd_init.i
+011     @PRINTF_U_678.P1
+011     routine1.A
+011     read_pot.chan
+011     read_buts.buttons
+011-01F operation2.kr
+011     operation4.@SCRATCH1
+011     operation3.@SCRATCH1
+012-015 lcd_init.LCD_INIT_STRING
+012     read_pot.value
+012     routine1.B
+012     @PRINTF_U_678.P1
+012     operation3.@SCRATCH2
+013-014 @PRINTF_LU_678.P1
+013     routine1.c
+013     @DIV88.P1
+013     @PSTRINGCN_678.P2
+014     @DIV88.P1
+014-015 routine1.outcome
+014     @PSTRINGCN_678.@SCRATCH1
+015     @PSTRINGCN_678.@SCRATCH2
+015     @DIV88.@SCRATCH1
+015     @PRINTF_LU_678.@SCRATCH1
+016     lcd_init.@SCRATCH1
+016     @PRINTF_LU_678.@SCRATCH2
+017     @PRINTF_LU_678.@SCRATCH3
+018     @PRINTF_LU_678.@SCRATCH4
+019     @PRINTF_LU_678.@SCRATCH5
+01A     @PRINTF_LU_678.@SCRATCH6
+01B     @PRINTF_LU_678.@SCRATCH7
+020     operation2.q
+021     @PSTRINGC_678.@SCRATCH1
+021     operation2.@SCRATCH1
+022     @PSTRINGC_678.@SCRATCH2
+023     lcd_putc.c
+024     @delay_ms1.P1
+024     lcd_gotoxy.x
+025     lcd_gotoxy.y
+026     lcd_gotoxy.address
+027     lcd_gotoxy.@SCRATCH1
+028     lcd_send_byte.address
+029     lcd_send_byte.n
+02A     lcd_read_byte.low
+02A     lcd_send_byte.@SCRATCH1
+02B     lcd_send_nibble.n
+02B     lcd_read_byte.high
+02C     lcd_read_nibble.n
+02C     lcd_read_byte.@SCRATCH1
+02D     lcd_read_nibble.@SCRATCH1
+F78.6   C2OUT
+F79.6   C1OUT
+F98     CCP_2_LOW
+F98     CCP_2
+F99     CCP_2_HIGH
+FBE     CCP_1_LOW
+FBE     CCP_1
+FBF     CCP_1_HIGH
+FE1-FE2 @READ_PACKED_MEMORY.P1
+FE1-FE2 @WRITE_PACKED_MEMORY.P2
+FE9-FEA @WRITE_PROGRAM_MEMORY.P1
+FE9-FEA @READ_PACKED_MEMORY.P2
+FE9-FEA @READ_PROGRAM_MEMORY.P3
+FE9-FEA @WRITE_PACKED_MEMORY.P4
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P1
+FF6-FF8 @READ_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+000004  @const717.call
+00001A  @const722.call
+00002C  @const723.call
+000040  @const724.call
+000046  @const725.call
+000056  @const726.call
+00006A  @const735.call
+000076  @const740.call
+000086  @const741.call
+000096  @delay_ms1
+0000BE  lcd_send_nibble
+000104  lcd_read_nibble
+000156  lcd_read_byte
+0001A2  lcd_send_byte
+0001E8  lcd_init
+000264  read_buts
+000280  lcd_gotoxy
+0002A2  lcd_putc
+0002F2  clear_outputs
+000310  @PSTRINGC_678
+000330  operation1
+00034C  operation2
+0003C4  read_pot
+0003F0  @PSTRINGCN_678
+00040E  @DIV88
+000436  @PRINTF_U_678
+00049C  routine1
+0004BE  @PRINTF_LU_678
+00057A  operation3
+000638  operation4
+0006C8  operation5
+0006E0  operation6
+0006F8  @cinit1
+0006F8  MAIN
+000742  @cinit2
+
+Project Directory:
+    C:\Users\soac-gj2\Desktop\embedded C 2024\project5\proteus\PIC18F45K50_1\
+
+Project Files:
+    main.c (link)                                           [07-Feb-24 14:23  CRC=E36AFC45]
+    main.h                                                  [07-Feb-24 09:29  CRC=5A0340D4]
+    ..\..\..\..\..\..\..\Program Files (x86)\PICC\devices\18F45k50.h [26-Jun-15 10:10  CRC=1BDE1B4B]
+    ..\..\..\..\..\..\..\Program Files (x86)\PICC\drivers\lcd.c [19-Sep-13 16:38  CRC=D1A6378A]
+
+Source signature=FC98C778
+Program memory checksum=0000
+Program memory CRC=0000
+Hex file CRC=1A95
+
+Units:
+    C:\Users\soac-gj2\Desktop\embedded C 2024\project5\proteus\PIC18F45K50_1\main.o
+
+Compiler Settings:
+    Processor:      PIC18F45K50
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:       CCS5
+
+Output Files:
+    Errors:      Debug.err
+    INHX32:      Debug.cof
+    Symbols:     Debug.sym
+    List:        Debug.lst
+    Debug/COFF:  Debug.cof

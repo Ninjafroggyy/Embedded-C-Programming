@@ -1,0 +1,430 @@
+CCS PCH C Compiler, Version 5.048, 26145               20-Mar-24 14:31
+
+               Filename:   C:\Users\soac-gj2\Desktop\playtime\proteus 2\PIC18F24K20_1\Debug.lst
+
+               ROM used:   634 bytes (4%)
+                           Largest free fragment is 15746
+               RAM used:   67 (9%) at main() level
+                           74 (10%) worst case
+               Stack used: 2 locations (0 in main + 2 for interrupts)
+               Stack size: 31
+
+*
+0000:  GOTO   01A4
+*
+0008:  MOVWF  04
+000A:  MOVFF  FD8,05
+000E:  MOVFF  FE0,06
+0012:  MOVLB  0
+0014:  MOVFF  FE9,0C
+0018:  MOVFF  FEA,07
+001C:  MOVFF  FE1,08
+0020:  MOVFF  FE2,09
+0024:  MOVFF  FD9,0A
+0028:  MOVFF  FDA,0B
+002C:  MOVFF  FF3,12
+0030:  MOVFF  FF4,13
+0034:  MOVFF  FFA,14
+0038:  MOVFF  FF5,15
+003C:  MOVFF  FF6,16
+0040:  MOVFF  FF7,17
+0044:  MOVFF  00,0E
+0048:  MOVFF  01,0F
+004C:  MOVFF  02,10
+0050:  MOVFF  03,11
+0054:  BTFSS  F9D.1
+0056:  GOTO   0060
+005A:  BTFSC  F9E.1
+005C:  GOTO   0168
+0060:  MOVFF  0E,00
+0064:  MOVFF  0F,01
+0068:  MOVFF  10,02
+006C:  MOVFF  11,03
+0070:  MOVFF  0C,FE9
+0074:  MOVFF  07,FEA
+0078:  BSF    07.7
+007A:  MOVFF  08,FE1
+007E:  MOVFF  09,FE2
+0082:  MOVFF  0A,FD9
+0086:  MOVFF  0B,FDA
+008A:  MOVFF  12,FF3
+008E:  MOVFF  13,FF4
+0092:  MOVFF  14,FFA
+0096:  MOVFF  15,FF5
+009A:  MOVFF  16,FF6
+009E:  MOVFF  17,FF7
+00A2:  MOVF   04,W
+00A4:  MOVFF  06,FE0
+00A8:  MOVFF  05,FD8
+00AC:  RETFIE 0
+.................... #import(file="main.o") 
+....................  
+.................... #include <main.h> 
+.................... #include <18F24K20.h> 
+.................... //////////// Standard Header file for the PIC18F24K20 device //////////////// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... ////        (C) Copyright 1996, 2014 Custom Computer Services          //// 
+.................... //// This source code may only be used by licensed users of the CCS C  //// 
+.................... //// compiler.  This source code may only be distributed to other      //// 
+.................... //// licensed users of the CCS C compiler.  No other use, reproduction //// 
+.................... //// or distribution is permitted without written permission.          //// 
+.................... //// Derivative programs created using this software in object code    //// 
+.................... //// form are not restricted in any way.                               //// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... #device PIC18F24K20 
+....................  
+.................... #list 
+....................  
+.................... #device ADC=10 
+....................  
+.................... #FUSES FCMEN                 	//Fail-safe clock monitor enabled 
+.................... #FUSES IESO                  	//Internal External Switch Over mode enabled 
+.................... #FUSES PUT                   	//Power Up Timer 
+.................... #FUSES NOBROWNOUT            	//No brownout reset 
+.................... #FUSES BORV27                	//Brownout reset at 2.7V 
+.................... #FUSES NOPBADEN              	//PORTB pins are configured as digital I/O on RESET 
+.................... #FUSES LPT1OSC               	//Timer1 configured for low-power operation 
+.................... #FUSES HFOFST                	//High Frequency INTRC starts clocking CPU immediately 
+.................... #FUSES NOMCLR                	//Master Clear pin used for I/O 
+.................... #FUSES STVREN                	//Stack full/underflow will cause reset 
+.................... #FUSES NOLVP                 	//No low voltage prgming, B3(PIC16) or B5(PIC18) used for I/O 
+.................... #FUSES NOXINST               	//Extended set extension and Indexed Addressing mode disabled (Legacy mode) 
+.................... #FUSES NOPROTECT             	//Code not protected from reading 
+.................... #FUSES NOCPB                 	//No Boot Block code protection 
+.................... #FUSES NOCPD                 	//No EE protection 
+.................... #FUSES NOWRT                 	//Program memory not write protected 
+.................... #FUSES NOWRTC                	//Configuration registers not write protected 
+.................... #FUSES NOWRTB                	//Boot block not write protected 
+.................... #FUSES NOWRTD                	//Data EEPROM not write protected 
+.................... #FUSES NOEBTR                	//Memory not protected from table reads 
+.................... #FUSES NOEBTRB               	//Boot block not protected from table reads 
+....................  
+.................... #use delay(internal=32MHz) 
+....................  
+.................... #define LED PIN_A7 
+.................... #define DELAY 500 
+....................  
+....................  
+....................  
+....................  
+.................... void	up_counter(unsigned int); 
+....................  
+.................... struct basic_struct 
+.................... 	{ 
+.................... 		unsigned long int count; 
+.................... 		unsigned long int reset_val; 
+.................... 		unsigned int1 flag; 
+.................... 	}; 
+....................  
+.................... 	unsigned int counter=0; 
+....................  
+.................... #INT_TIMER2 
+.................... void  TIMER2_isr(void)  
+.................... { 
+.................... 	counter++; 
+*
+0168:  INCF   19,F
+.................... 		if(counter>=10) 
+016A:  MOVF   19,W
+016C:  SUBLW  09
+016E:  BC    019E
+.................... 			{ 
+.................... 				up_counter(0); 
+0170:  CLRF   43
+0172:  RCALL  00AE
+.................... 				up_counter(1); 
+0174:  MOVLW  01
+0176:  MOVWF  43
+0178:  RCALL  00AE
+.................... 				up_counter(2); 
+017A:  MOVLW  02
+017C:  MOVWF  43
+017E:  RCALL  00AE
+.................... 				up_counter(3); 
+0180:  MOVLW  03
+0182:  MOVWF  43
+0184:  RCALL  00AE
+.................... 				up_counter(4); 
+0186:  MOVLW  04
+0188:  MOVWF  43
+018A:  RCALL  00AE
+.................... 				up_counter(5); 
+018C:  MOVLW  05
+018E:  MOVWF  43
+0190:  RCALL  00AE
+.................... 				up_counter(6); 
+0192:  MOVLW  06
+0194:  MOVWF  43
+0196:  RCALL  00AE
+.................... 				up_counter(7); 
+0198:  MOVLW  07
+019A:  MOVWF  43
+019C:  RCALL  00AE
+.................... 			} 
+....................  
+....................  
+019E:  BCF    F9E.1
+01A0:  GOTO   0060
+.................... } 
+....................  
+.................... struct basic_struct soft_clock[8]; 
+.................... #pragma pack; 
+.................... void main() 
+01A4:  CLRF   FF8
+01A6:  BCF    FD0.7
+01A8:  BSF    07.7
+01AA:  MOVLW  60
+01AC:  MOVWF  FD3
+01AE:  BSF    F9B.6
+01B0:  BCF    F9B.7
+01B2:  CLRF   19
+01B4:  MOVLW  00
+01B6:  MOVWF  F7E
+01B8:  BCF    FC1.4
+01BA:  BCF    FC1.5
+01BC:  MOVF   F7F,W
+01BE:  ANDLW  E0
+01C0:  MOVWF  F7F
+01C2:  BCF    F79.5
+01C4:  BCF    F79.4
+01C6:  CLRF   F7A
+01C8:  CLRF   F7B
+.................... { 
+....................  
+....................  
+....................  
+.................... 	soft_clock[0].reset_val=3; 
+01CA:  CLRF   1D
+01CC:  MOVLW  03
+01CE:  MOVWF  1C
+.................... 	soft_clock[1].reset_val=5; 
+01D0:  CLRF   22
+01D2:  MOVLW  05
+01D4:  MOVWF  21
+.................... 	soft_clock[2].reset_val=7; 
+01D6:  CLRF   27
+01D8:  MOVLW  07
+01DA:  MOVWF  26
+.................... 	soft_clock[3].reset_val=11; 
+01DC:  CLRF   2C
+01DE:  MOVLW  0B
+01E0:  MOVWF  2B
+.................... 	soft_clock[4].reset_val=13; 
+01E2:  CLRF   31
+01E4:  MOVLW  0D
+01E6:  MOVWF  30
+.................... 	soft_clock[5].reset_val=17; 
+01E8:  CLRF   36
+01EA:  MOVLW  11
+01EC:  MOVWF  35
+.................... 	soft_clock[6].reset_val=19; 
+01EE:  CLRF   3B
+01F0:  MOVLW  13
+01F2:  MOVWF  3A
+.................... 	soft_clock[7].reset_val=23; 
+01F4:  CLRF   40
+01F6:  MOVLW  17
+01F8:  MOVWF  3F
+.................... output_c(0); 
+01FA:  CLRF   F94
+01FC:  CLRF   F8B
+.................... int a=0; 
+01FE:  CLRF   42
+.................... 	setup_adc_ports(sAN0|sAN1); 
+0200:  MOVLW  03
+0202:  MOVWF  F7E
+0204:  BCF    FC1.4
+0206:  BCF    FC1.5
+0208:  MOVF   F7F,W
+020A:  ANDLW  E0
+020C:  MOVWF  F7F
+.................... 	setup_adc(ADC_CLOCK_INTERNAL|ADC_TAD_MUL_0); 
+020E:  MOVF   FC0,W
+0210:  ANDLW  C0
+0212:  IORLW  07
+0214:  MOVWF  FC0
+0216:  BSF    FC0.7
+0218:  BSF    FC2.0
+.................... 	setup_timer_2(T2_DIV_BY_16,250,16);		//502 us overflow, 8.0 ms interrupt 
+021A:  MOVLW  78
+021C:  IORLW  06
+021E:  MOVWF  FCA
+0220:  MOVLW  FA
+0222:  MOVWF  FCB
+....................  
+....................  
+.................... 	enable_interrupts(INT_TIMER2); 
+0224:  BSF    F9D.1
+.................... 	enable_interrupts(GLOBAL); 
+0226:  MOVLW  C0
+0228:  IORWF  FF2,F
+....................  
+.................... 	while(TRUE) 
+.................... 	{ 
+.................... 		if(soft_clock[0].flag) {output_toggle(pin_c0);soft_clock[0].flag=0;} 
+022A:  BTFSS  1E.0
+022C:  BRA    0234
+022E:  BCF    F94.0
+0230:  BTG    F8B.0
+0232:  BCF    1E.0
+.................... 		if(soft_clock[1].flag) {output_toggle(pin_c1);soft_clock[1].flag=0;} 
+0234:  BTFSS  23.0
+0236:  BRA    023E
+0238:  BCF    F94.1
+023A:  BTG    F8B.1
+023C:  BCF    23.0
+.................... 		if(soft_clock[2].flag) {output_toggle(pin_c2);soft_clock[2].flag=0;} 
+023E:  BTFSS  28.0
+0240:  BRA    0248
+0242:  BCF    F94.2
+0244:  BTG    F8B.2
+0246:  BCF    28.0
+.................... 		if(soft_clock[3].flag) {output_toggle(pin_c3);soft_clock[3].flag=0;} 
+0248:  BTFSS  2D.0
+024A:  BRA    0252
+024C:  BCF    F94.3
+024E:  BTG    F8B.3
+0250:  BCF    2D.0
+.................... 		if(soft_clock[4].flag) {output_toggle(pin_c4);soft_clock[4].flag=0;} 
+0252:  BTFSS  32.0
+0254:  BRA    025C
+0256:  BCF    F94.4
+0258:  BTG    F8B.4
+025A:  BCF    32.0
+.................... 		if(soft_clock[5].flag) {output_toggle(pin_c5);soft_clock[5].flag=0;} 
+025C:  BTFSS  37.0
+025E:  BRA    0266
+0260:  BCF    F94.5
+0262:  BTG    F8B.5
+0264:  BCF    37.0
+.................... 		if(soft_clock[6].flag) {output_toggle(pin_c6);soft_clock[6].flag=0;} 
+0266:  BTFSS  3C.0
+0268:  BRA    0270
+026A:  BCF    F94.6
+026C:  BTG    F8B.6
+026E:  BCF    3C.0
+.................... 		if(soft_clock[7].flag) {output_toggle(pin_c7);soft_clock[7].flag=0;} 
+0270:  BTFSS  41.0
+0272:  BRA    027A
+0274:  BCF    F94.7
+0276:  BTG    F8B.7
+0278:  BCF    41.0
+027A:  BRA    022A
+.................... 	} 
+.................... } 
+....................  
+027C:  SLEEP 
+.................... void	up_counter(unsigned int ident) 
+.................... 	{ 
+.................... /*		unsigned int count; 
+.................... 		unsigned int reset_val; 
+.................... //		unsigned int current; 
+.................... 		unsigned int1 flag;*/ 
+.................... 		soft_clock[ident].count++; 
+*
+00AE:  MOVF   43,W
+00B0:  MULLW  05
+00B2:  MOVF   FF3,W
+00B4:  CLRF   45
+00B6:  MOVWF  44
+00B8:  MOVLW  1A
+00BA:  ADDWF  44,W
+00BC:  MOVWF  FE9
+00BE:  MOVLW  00
+00C0:  ADDWFC 45,W
+00C2:  MOVWF  FEA
+00C4:  MOVLW  01
+00C6:  ADDWF  FEE,F
+00C8:  BNC   00CC
+00CA:  INCF   FEF,F
+.................... 		if(soft_clock[ident].count>=soft_clock[ident].reset_val) 
+00CC:  MOVF   43,W
+00CE:  MULLW  05
+00D0:  MOVF   FF3,W
+00D2:  CLRF   45
+00D4:  MOVWF  44
+00D6:  MOVLW  1A
+00D8:  ADDWF  44,W
+00DA:  MOVWF  FE9
+00DC:  MOVLW  00
+00DE:  ADDWFC 45,W
+00E0:  MOVWF  FEA
+00E2:  MOVFF  FEC,47
+00E6:  MOVF   FED,F
+00E8:  MOVFF  FEF,46
+00EC:  MOVF   43,W
+00EE:  MULLW  05
+00F0:  MOVF   FF3,W
+00F2:  CLRF   49
+00F4:  MOVWF  48
+00F6:  MOVLW  02
+00F8:  ADDWF  48,W
+00FA:  MOVWF  01
+00FC:  MOVLW  00
+00FE:  ADDWFC 49,W
+0100:  MOVWF  03
+0102:  MOVF   01,W
+0104:  ADDLW  1A
+0106:  MOVWF  FE9
+0108:  MOVLW  00
+010A:  ADDWFC 03,W
+010C:  MOVWF  FEA
+010E:  MOVFF  FEC,03
+0112:  MOVF   FED,F
+0114:  MOVFF  FEF,01
+0118:  MOVF   03,W
+011A:  SUBWF  47,W
+011C:  BNC   0166
+011E:  BNZ   0126
+0120:  MOVF   01,W
+0122:  SUBWF  46,W
+0124:  BNC   0166
+.................... 			{ 
+.................... 				soft_clock[ident].count=0; 
+0126:  MOVF   43,W
+0128:  MULLW  05
+012A:  MOVF   FF3,W
+012C:  CLRF   45
+012E:  MOVWF  44
+0130:  MOVLW  1A
+0132:  ADDWF  44,W
+0134:  MOVWF  FE9
+0136:  MOVLW  00
+0138:  ADDWFC 45,W
+013A:  MOVWF  FEA
+013C:  CLRF   FEC
+013E:  MOVF   FED,F
+0140:  CLRF   FEF
+.................... 				soft_clock[ident].flag=1; 
+0142:  MOVF   43,W
+0144:  MULLW  05
+0146:  MOVF   FF3,W
+0148:  CLRF   45
+014A:  MOVWF  44
+014C:  MOVLW  04
+014E:  ADDWF  44,W
+0150:  MOVWF  01
+0152:  MOVLW  00
+0154:  ADDWFC 45,W
+0156:  MOVWF  03
+0158:  MOVF   01,W
+015A:  ADDLW  1A
+015C:  MOVWF  FE9
+015E:  MOVLW  00
+0160:  ADDWFC 03,W
+0162:  MOVWF  FEA
+0164:  BSF    FEF.0
+.................... 				 
+.................... 			} 
+0166:  RETURN 0
+.................... 	} 
+....................  
+
+Configuration Fuses:
+   Word  1: C800   INTRC_IO FCMEN IESO
+   Word  2: 1E08   PUT NOBROWNOUT BORV27 NOWDT WDT32768
+   Word  3: 0D00   CCP2C1 NOPBADEN LPT1OSC HFOFST NOMCLR
+   Word  4: 0081   STVREN NOLVP NOXINST NODEBUG
+   Word  5: C003   NOPROTECT NOCPB NOCPD
+   Word  6: E003   NOWRT NOWRTC NOWRTB NOWRTD
+   Word  7: 4003   NOEBTR NOEBTRB

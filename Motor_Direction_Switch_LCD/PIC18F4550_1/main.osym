@@ -1,0 +1,42 @@
+_RETURN_
+CCP_1
+CCP_1_LOW
+CCP_1_HIGH
+CCP_2
+CCP_2_LOW
+CCP_2_HIGH
+PSP_DATA
+C1OUT
+C2OUT
+rs232_errors
+swt_way
+@sprintf_string
+
+Project Directory:
+    C:\Users\S2317703\Documents\project 3\proteus\PIC18F4550_1\
+
+Project Files:
+    main.c                                                  [02-Dec-24 10:47  CRC=3075047A]
+    main.h                                                  [02-Dec-24 09:21  CRC=1AFB437F]
+    18F4550.h                                               [02-Dec-24 09:21  CRC=97DC185D]
+    lcd.c                                                   [02-Dec-24 09:21  CRC=D1A6378A]
+
+Source signature=8698CF6A
+
+Units:
+    C:\Users\S2317703\Documents\project 3\proteus\PIC18F4550_1\main
+
+Compiler Settings:
+    Processor:      PIC18F4550
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Output file:    Relocatable
+    Compile Mode:   CCS5
+
+Output Files:
+    Errors:      main.err
+    Object:      main.o
+    Symbols:     main.osym

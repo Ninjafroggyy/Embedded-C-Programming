@@ -1,0 +1,50 @@
+_RETURN_
+CCP_1
+CCP_1_LOW
+CCP_1_HIGH
+CCP_2
+CCP_2_LOW
+CCP_2_HIGH
+C1OUT
+C2OUT
+rs232_errors
+switches
+rout1
+rout2
+rout3
+rout4
+ops
+old_ops
+adc0
+adc1
+adc2
+@sprintf_string
+
+Project Directory:
+    C:\Users\soac-gj2\Desktop\embedded C 2024\project5\proteus\PIC18F45K50_1\
+
+Project Files:
+    main.c                                                  [07-Feb-24 14:23  CRC=E36AFC45]
+    main.h                                                  [07-Feb-24 09:29  CRC=5A0340D4]
+    ..\..\..\..\..\..\..\Program Files (x86)\PICC\devices\18F45k50.h [26-Jun-15 10:10  CRC=1BDE1B4B]
+    ..\..\..\..\..\..\..\Program Files (x86)\PICC\drivers\lcd.c [19-Sep-13 16:38  CRC=D1A6378A]
+
+Source signature=FC98C778
+
+Units:
+    main (main)
+
+Compiler Settings:
+    Processor:      PIC18F45K50
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Output file:    Relocatable
+    Compile Mode:       CCS5
+
+Output Files:
+    Errors:      main.err
+    Object:      main.o
+    Symbols:     main.osym

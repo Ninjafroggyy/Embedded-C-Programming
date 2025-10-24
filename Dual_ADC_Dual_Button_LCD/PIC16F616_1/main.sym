@@ -1,0 +1,74 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+013     CCP_1_LOW
+013     CCP_1
+014     CCP_1_HIGH
+01A.6   C1OUT
+01B.6   C2OUT
+020     @SCRATCH
+021     @SCRATCH
+021     _RETURN_
+022     @SCRATCH
+023     @SCRATCH
+025     lcd_init.i
+025     MAIN.@SCRATCH1
+026-029 lcd_init.LCD_INIT_STRING
+02A     @delay_ms1.P1
+02A     lcd_init.@SCRATCH1
+02B     lcd_send_byte.address
+02C     lcd_send_byte.n
+02D     lcd_read_byte.low
+02D     lcd_send_byte.@SCRATCH1
+02E     lcd_send_nibble.n
+02E     lcd_read_byte.high
+02F     lcd_read_nibble.n
+02F     lcd_read_byte.@SCRATCH1
+030     lcd_read_nibble.@SCRATCH1
+10D-10E @READ_PROGRAM_MEMORY8.P1
+
+ROM Allocation:
+000004  @delay_ms1
+000017  lcd_send_nibble
+000043  lcd_read_nibble
+000074  lcd_init
+0000B3  lcd_send_byte
+0000BB  lcd_read_byte
+000111  @cinit1
+000111  MAIN
+00011F  @cinit2
+
+Project Directory:
+    C:\Users\CCS-USER\Documents\CCS C Projects\Embedded C\CCS\
+
+Project Files:
+    main.c                                                  [21-Oct-24 10:43  CRC=06B44E41]
+    main.h                                                  [21-Oct-24 10:43  CRC=D872A938]
+    ..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16F616.h [09-Feb-21 14:45  CRC=E848078B]
+    ..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\lcd.c [22-Feb-16 09:05  CRC=D1A6378A]
+
+Source signature=6ABB6E18
+Program memory checksum=0000
+Hex file CRC=C7BB
+
+Units:
+    C:\Users\CCS-USER\Documents\CCS C Projects\Embedded C\CCS\main (main)
+
+Compiler Settings:
+    Processor:      PIC16F616
+    Pointer Size:   8
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:   CCS5
+
+Output Files:
+    XREF file:   main.xsym
+    Errors:      main.err
+    Ext Symbols: main.esym
+    INHX8:       main.hex
+    Symbols:     main.sym
+    List:        main.lst
+    Debug/COFF:  main.cof
+    Project:     main.ccspjt
+    Call Tree:   main.tre
+    Statistics:  main.STA

@@ -1,0 +1,45 @@
+_RETURN_
+CCP_1
+CCP_1_LOW
+CCP_1_HIGH
+CCP_2
+CCP_2_LOW
+CCP_2_HIGH
+C1OUT
+C2OUT
+adc
+remainder
+new_adc
+knightrider
+off
+on
+@sprintf_string
+
+Project Directory:
+    C:\Users\ISA06016798\Documents\Embeded C\proteus (2)\ACDA - Emma Moseley - Assignment\PIC18F45K50\
+
+Project Files:
+    main.c                                                  [15-Jan-25 08:49  CRC=6A34339B]
+    main.h                                                  [14-Jan-25 13:59  CRC=8EFB0D07]
+    18F45K50.h                                              [13-Jan-25 16:40  CRC=1BDE1B4B]
+    lcd.c                                                   [13-Jan-25 16:40  CRC=D1A6378A]
+
+Source signature=B859CB01
+
+Units:
+    C:\Users\ISA06016798\Documents\Embeded C\proteus (2)\ACDA - Emma Moseley - Assignment\PIC18F45K50\main
+
+Compiler Settings:
+    Processor:      PIC18F45K50
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Output file:    Relocatable
+    Compile Mode:   CCS5
+
+Output Files:
+    Errors:      main.err
+    Object:      main.o
+    Symbols:     main.osym

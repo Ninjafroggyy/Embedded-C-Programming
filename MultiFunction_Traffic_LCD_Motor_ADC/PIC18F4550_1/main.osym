@@ -1,0 +1,49 @@
+_RETURN_
+CCP_1
+CCP_1_LOW
+CCP_1_HIGH
+CCP_2
+CCP_2_LOW
+CCP_2_HIGH
+PSP_DATA
+C1OUT
+C2OUT
+rs232_errors
+count
+value0
+value1
+value2
+lights_A
+lights_B
+
+Project Directory:
+    C:\Users\ISA06016798\Documents\Project 2\Pro\PIC18F4550_1\
+
+Project Files:
+    main.c                                                  [28-Oct-24 12:54  CRC=1E0B4F31]
+    main.h                                                  [28-Oct-24 09:14  CRC=1AFB437F]
+    ..\..\..\..\..\..\Program Files (x86)\PICCDEMO\devices\18F4550.h [26-Mar-24 08:18  CRC=97DC185D]
+    ..\..\..\..\..\..\Program Files (x86)\PICCDEMO\drivers\lcd.c [22-Feb-16 09:05  CRC=D1A6378A]
+
+Source signature=742F1A21
+
+Units:
+    C:\Users\ISA06016798\Documents\Project 2\Pro\PIC18F4550_1\main
+
+Compiler Settings:
+    Processor:      PIC18F4550
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Output file:    Relocatable
+    Compile Mode:   CCS5
+
+Compiler operating in Evaluation Mode
+To obtain a fully enabled compiler visit www.ccsinfo.com/products
+
+Output Files:
+    Errors:      main.err
+    Object:      main.o
+    Symbols:     main.osym

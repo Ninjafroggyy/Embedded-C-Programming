@@ -1,0 +1,42 @@
+_RETURN_
+CCP_1
+CCP_1_LOW
+CCP_1_HIGH
+C1OUT
+C2OUT
+value
+value1
+val
+val1
+
+Project Directory:
+    G:\My Drive\Academic\BEng (Hons) Embedded Electronics Systems Engineering\Level 4\Embedded C\Classwork\Proteus\PIC16F616_1\
+
+Project Files:
+    main.c                                                  [22-Oct-24 15:30  CRC=876EDC44]
+    main.h                                                  [22-Oct-24 15:00  CRC=D8102B21]
+    C:\Program Files (x86)\PICCDEMO\devices\16F616.h        [26-Mar-24 09:13  CRC=BB3F2C8F]
+    C:\Program Files (x86)\PICCDEMO\drivers\lcd.c           [22-Feb-16 10:05  CRC=D1A6378A]
+
+Source signature=BE0AA308
+
+Units:
+    G:\My Drive\Academic\BEng (Hons) Embedded Electronics Systems Engineering\Level 4\Embedded C\Classwork\Proteus\PIC16F616_1\main
+
+Compiler Settings:
+    Processor:      PIC16F616
+    Pointer Size:   8
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Output file:    Relocatable
+    Compile Mode:   CCS5
+
+Compiler operating in Evaluation Mode
+To obtain a fully enabled compiler visit www.ccsinfo.com/products
+
+Output Files:
+    Errors:      main.err
+    Object:      main.o
+    Symbols:     main.osym

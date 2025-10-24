@@ -1,0 +1,126 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+004     switches
+005     rout1
+006     rout2
+007     rout3
+008     rout4
+009-010 kr
+011     read_pot.value
+011     lcd_init.i
+011     MAIN.@SCRATCH1
+012     @PRINTF_U_665.P1
+012-015 lcd_init.LCD_INIT_STRING
+012     routine1.A
+012     MAIN.@SCRATCH2
+013     @PSTRINGCN_665.P1
+013     routine1.B
+013     @PRINTF_U_665.P1
+013-014 @PRINTF_LU_665.P2
+014     routine1.c
+014     @DIV88.P1
+014     @PSTRINGCN_665.@SCRATCH1
+015     @DIV88.P1
+015-016 routine1.outcome
+015     @PSTRINGCN_665.@SCRATCH2
+015     @PRINTF_LU_665.@SCRATCH1
+016     lcd_init.@SCRATCH1
+016     @PRINTF_LU_665.@SCRATCH2
+016     @DIV88.@SCRATCH1
+017-018 @MUL1616.P1
+017     @PRINTF_LU_665.@SCRATCH3
+018     @PRINTF_LU_665.@SCRATCH4
+019-01A @MUL1616.P1
+019     @PRINTF_LU_665.@SCRATCH5
+01A     @PRINTF_LU_665.@SCRATCH6
+01B     @PRINTF_LU_665.@SCRATCH7
+01B     @MUL1616.@SCRATCH1
+01C     lcd_putc.c
+01D     @delay_ms1.P1
+01D     lcd_gotoxy.x
+01E     lcd_gotoxy.y
+01F     lcd_gotoxy.address
+020     lcd_gotoxy.@SCRATCH1
+021     lcd_send_byte.address
+022     lcd_send_byte.n
+023     lcd_read_byte.low
+023     lcd_send_byte.@SCRATCH1
+024     lcd_read_byte.high
+024     lcd_send_nibble.n
+025     lcd_read_nibble.n
+025     lcd_read_byte.@SCRATCH1
+026     lcd_read_nibble.@SCRATCH1
+F7A.6   C2OUT
+F7B.6   C1OUT
+FBB     CCP_2
+FBB     CCP_2_LOW
+FBC     CCP_2_HIGH
+FBE     CCP_1_LOW
+FBE     CCP_1
+FBF     CCP_1_HIGH
+FE1-FE2 @WRITE_PACKED_MEMORY.P1
+FE1-FE2 @READ_PACKED_MEMORY.P2
+FE9-FEA @WRITE_PROGRAM_MEMORY.P1
+FE9-FEA @WRITE_PACKED_MEMORY.P2
+FE9-FEA @READ_PROGRAM_MEMORY.P3
+FE9-FEA @READ_PACKED_MEMORY.P4
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P1
+FF6-FF8 @READ_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+000004  @const692.call
+000014  @const697.call
+000026  @delay_ms1
+00004E  lcd_send_nibble
+000094  lcd_read_nibble
+0000E6  lcd_read_byte
+000132  lcd_send_byte
+000178  lcd_init
+0001F4  lcd_gotoxy
+000216  lcd_putc
+000266  read_pot
+00028C  @MUL1616
+0002AC  routine1
+0002DA  @PSTRINGCN_665
+0002F8  @PRINTF_LU_665
+0003B4  @DIV88
+0003DC  @PRINTF_U_665
+000444  @cinit1
+000444  MAIN
+000490  @cinit2
+
+Project Directory:
+    C:\Users\soac-gj2\Desktop\embedded c 2024\project4\proteus\PIC18F26K20_1\
+
+Project Files:
+    main.c (link)                                           [02-Feb-24 12:16  CRC=1EDA0F6D]
+    main.h                                                  [01-Feb-24 16:21  CRC=17704685]
+    18F26K20.h                                              [26-Jun-15 09:09  CRC=43F2182D]
+    lcd.c                                                   [19-Sep-13 15:38  CRC=D1A6378A]
+
+Source signature=1D88DD33
+Program memory checksum=0000
+Program memory CRC=0000
+Hex file CRC=76FA
+
+Units:
+    C:\Users\soac-gj2\Desktop\embedded c 2024\project4\proteus\PIC18F26K20_1\main.o
+
+Compiler Settings:
+    Processor:      PIC18F26K20
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:       CCS5
+
+Output Files:
+    Errors:      Debug.err
+    INHX32:      Debug.cof
+    Symbols:     Debug.sym
+    List:        Debug.lst
+    Debug/COFF:  Debug.cof

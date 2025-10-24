@@ -1,0 +1,140 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+004     @INTERRUPT_AREA
+005     @INTERRUPT_AREA
+006     @INTERRUPT_AREA
+007     @INTERRUPT_AREA
+008     @INTERRUPT_AREA
+009     @INTERRUPT_AREA
+00A     @INTERRUPT_AREA
+00B     @INTERRUPT_AREA
+00C     @INTERRUPT_AREA
+00D     @INTERRUPT_AREA
+00E     @INTERRUPT_AREA
+00F     @INTERRUPT_AREA
+010     @INTERRUPT_AREA
+011     @INTERRUPT_AREA
+012     @INTERRUPT_AREA
+013     @INTERRUPT_AREA
+014     @INTERRUPT_AREA
+015     @INTERRUPT_AREA
+016     @INTERRUPT_AREA
+017     @INTERRUPT_AREA
+018     @INTERRUPT_AREA
+019     rs232_errors
+01A     count
+01B     value0
+01C     value1
+01D     value2
+01E-026 lights_A
+027-02F lights_B
+030     MAIN.q
+031     lcd_init.i
+031     @PRINTF_U_760.P1
+031     @PSTRINGCN_760.P2
+031     MAIN.@SCRATCH1
+031     rotate.@SCRATCH1
+032     @PRINTF_U_760.P1
+032-035 lcd_init.LCD_INIT_STRING
+032     @PSTRINGCN_760.@SCRATCH1
+033     @DIV88.P1
+033     @PSTRINGCN_760.@SCRATCH2
+034     lcd_putc.c
+034     @DIV88.P1
+035     lcd_gotoxy.x
+035     @DIV88.@SCRATCH1
+036     @delay_ms1.P1
+036     lcd_gotoxy.y
+036     lcd_init.@SCRATCH1
+037     lcd_gotoxy.address
+038     lcd_gotoxy.@SCRATCH1
+039     lcd_send_byte.address
+03A     lcd_send_byte.n
+03B     lcd_read_byte.low
+03B     lcd_send_byte.@SCRATCH1
+03C     lcd_read_byte.high
+03C     lcd_send_nibble.n
+03D     lcd_read_nibble.n
+03D     lcd_read_byte.@SCRATCH1
+03E     lcd_read_nibble.@SCRATCH1
+F83     PSP_DATA
+FB4.6   C1OUT
+FB4.7   C2OUT
+FBB     CCP_2_LOW
+FBB     CCP_2
+FBC     CCP_2_HIGH
+FBE     CCP_1_LOW
+FBE     CCP_1
+FBF     CCP_1_HIGH
+FE1-FE2 @READ_PACKED_MEMORY.P1
+FE1-FE2 @WRITE_PACKED_MEMORY.P2
+FE9-FEA @WRITE_PACKED_MEMORY.P1
+FE9-FEA @READ_PROGRAM_MEMORY.P2
+FE9-FEA @READ_PACKED_MEMORY.P3
+FE9-FEA @WRITE_PROGRAM_MEMORY.P4
+FF6-FF8 @READ_PROGRAM_MEMORY.P1
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+0000D2  TIMER2_isr
+0000DC  EXT_isr
+0000E2  EXT1_isr
+0000EC  EXT2_isr
+0000F6  @const790.call
+000104  @const799.call
+000112  @const800.call
+000120  @delay_ms1
+000146  lcd_send_nibble
+000186  lcd_read_nibble
+0001D8  lcd_read_byte
+000222  lcd_send_byte
+000268  lcd_init
+0002E4  analogs
+000346  lcd_gotoxy
+000368  lcd_putc
+0003B8  @PSTRINGCN_760
+0003D6  @DIV88
+0003FE  @PRINTF_U_760
+000464  printanalogs
+0004CC  rotate
+000512  @cinit1
+000512  MAIN
+00057E  @cinit2
+
+Project Directory:
+    C:\Users\ISA06016798\Documents\Project 2\Pro\PIC18F4550_1\
+
+Project Files:
+    main.c (link)                                           [28-Oct-24 12:54  CRC=1E0B4F31]
+    main.h                                                  [28-Oct-24 09:14  CRC=1AFB437F]
+    ..\..\..\..\..\..\Program Files (x86)\PICCDEMO\devices\18F4550.h [26-Mar-24 08:18  CRC=97DC185D]
+    ..\..\..\..\..\..\Program Files (x86)\PICCDEMO\drivers\lcd.c [22-Feb-16 09:05  CRC=D1A6378A]
+
+Source signature=742F1A21
+Program memory checksum=0000
+Hex file CRC=0A11
+
+Units:
+    C:\Users\ISA06016798\Documents\Project 2\Pro\PIC18F4550_1\main
+
+Compiler Settings:
+    Processor:      PIC18F4550
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:   CCS5
+
+Compiler operating in Evaluation Mode
+To obtain a fully enabled compiler visit www.ccsinfo.com/products
+
+Output Files:
+    Errors:      Debug.err
+    INHX32:      Debug.cof
+    Symbols:     Debug.sym
+    List:        Debug.lst
+    Debug/COFF:  Debug.cof

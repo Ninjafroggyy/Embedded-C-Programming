@@ -1,0 +1,36 @@
+[PROJECT]
+Target=main.hex
+Processor_Text=PIC16F616
+CCSVerions=5.103
+Compiler=PCM
+CCSVersion=5.103
+[Target Data]
+FileList=main.c
+[Directories]
+Include=
+[C:\Users\CCS-USER\Documents\CCS C Projects\Embedded C\CCS\main]
+Type=4
+[mru-list]
+1=main.c
+
+[fileformats]
+forcecoff=0
+
+[ProjectLog]
+Days=1
+D1=21-10-2024
+D1_L=1
+D1_L1=[38582]Project Opened.
+
+[Opened Files]
+1=main.c
+t1=1
+Count=1
+[main.c]
+Type=4
+[Units]
+Count=1
+1=main (main)
+
+[defines]
+buildcount=1
